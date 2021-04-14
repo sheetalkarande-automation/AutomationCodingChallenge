@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>AutomationCodingChallenge</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20180130</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>3.1.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+        <dependency>
+            <groupId>com.relevantcodes</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>2.41.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>2.0.2-beta</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.activation/activation -->
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>3.1.5</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>4.1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.9.8</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
+
+        <dependency>
+
+            <groupId>io.cucumber</groupId>
+
+            <artifactId>cucumber-core</artifactId>
+
+            <version>2.1.0</version>
+
+        </dependency>
+
+
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-html -->
+
+        <dependency>
+
+            <groupId>io.cucumber</groupId>
+
+            <artifactId>cucumber-html</artifactId>
+
+            <version>0.2.7</version>
+
+        </dependency>
+
+
+
+
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+
+        <dependency>
+
+            <groupId>io.cucumber</groupId>
+
+            <artifactId>cucumber-java</artifactId>
+
+            <version>2.1.0</version>
+
+        </dependency>
+
+
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+
+        <dependency>
+
+            <groupId>io.cucumber</groupId>
+
+            <artifactId>cucumber-junit</artifactId>
+
+            <version>2.1.0</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm-deps -->
+
+        <dependency>
+
+            <groupId>io.cucumber</groupId>
+
+            <artifactId>cucumber-jvm-deps</artifactId>
+
+            <version>1.0.6</version>
+
+            <scope>provided</scope>
+
+        </dependency>
+
+
+
+        <!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
+
+        <dependency>
+
+            <groupId>net.masterthought</groupId>
+
+            <artifactId>cucumber-reporting</artifactId>
+
+            <version>3.12.0</version>
+
+        </dependency>
+
+
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
+
+        <dependency>
+
+            <groupId>io.cucumber</groupId>
+
+            <artifactId>gherkin</artifactId>
+
+            <version>5.0.0</version>
+
+        </dependency>
+
+
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+
+        <dependency>
+
+            <groupId>junit</groupId>
+
+            <artifactId>junit</artifactId>
+
+            <version>4.12</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+
+
+        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+
+        <dependency>
+
+            <groupId>log4j</groupId>
+
+            <artifactId>log4j</artifactId>
+
+            <version>1.2.17</version>
+
+        </dependency>
+
+
+
+        <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+
+        <dependency>
+
+            <groupId>org.mockito</groupId>
+
+            <artifactId>mockito-core</artifactId>
+
+            <version>2.23.4</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+
+
+        <!-- https://mvnrepository.com/artifact/org.picocontainer/picocontainer -->
+
+        <dependency>
+
+            <groupId>org.picocontainer</groupId>
+
+            <artifactId>picocontainer</artifactId>
+
+            <version>2.15</version>
+
+        </dependency>
+
+
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/tag-expressions -->
+
+        <dependency>
+
+            <groupId>io.cucumber</groupId>
+
+            <artifactId>tag-expressions</artifactId>
+
+            <version>1.1.1</version>
+
+        </dependency>
+
+
+
+
+
+        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
+
+        <dependency>
+
+            <groupId>info.cukes</groupId>
+
+            <artifactId>cucumber-picocontainer</artifactId>
+
+            <version>1.1.1</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+
+
+        <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-core -->
+
+        <dependency>
+
+            <groupId>org.hamcrest</groupId>
+
+            <artifactId>hamcrest-core</artifactId>
+
+            <version>2.1</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.rubiconproject.oss/jchronic -->
+
+        <dependency>
+
+            <groupId>com.rubiconproject.oss</groupId>
+
+            <artifactId>jchronic</artifactId>
+
+            <version>0.2.6</version>
+
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.9.8</version>
+            <scope>compile</scope>
+        </dependency>
+
+
+    </dependencies>
+
+
+</project>
