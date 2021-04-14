@@ -68,13 +68,19 @@ public class Challenge2 {
         JavascriptExecutor exe = (JavascriptExecutor)driver;
         WebDriverWait wait = new WebDriverWait(driver,10);
 
+        String strCarouselLabel = "//h3[text()='" + strCarouselHeaderLabel + "']/ancestor::div[@class='sc-kfzAmx jvvgOu']";
+
+        String strNextBtn = strCarouselLabel+"//div[contains(@class,'swiper-button-next')]";
+
+        String strProductName = strCarouselLabel+"//div[@data-qa='product-name']";
+
         exe.executeScript("window.scrollTo(0, -document.body.scrollHeight)");
         Thread.sleep(3000);
 
         do {
             try {
                 headerLabel = 1;
-                wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//h3[text()='" + strCarouselHeaderLabel + "']"))));
+                wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(strCarouselLabel))));
 
             } catch (NoSuchElementException e) {
                 headerLabel = 0;
@@ -83,10 +89,10 @@ public class Challenge2 {
             }
         }while (headerLabel==0);
 
-        WebElement carouselHeaderLabel = driver.findElement(By.xpath("//h3[text()='"+strCarouselHeaderLabel+"']"));
+        WebElement carouselHeaderLabel = driver.findElement(By.xpath(strCarouselLabel));
 
         try {
-            wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//h3[text()='"+strCarouselHeaderLabel+"']/../../..//div[contains(@class,'swiper-button-next')]"))));
+            wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(strNextBtn))));
 
         }catch (NoSuchElementException e){
 
@@ -100,7 +106,7 @@ public class Challenge2 {
 
         do {
             Thread.sleep(2000);
-            listOfProducts = driver.findElements(By.xpath("//h3[text()='" + strCarouselHeaderLabel + "']/../../..//div[@data-qa=\"product-name\"]/div"));
+            listOfProducts = driver.findElements(By.xpath(strProductName));
 
             for (WebElement ele : listOfProducts) {
 
@@ -111,7 +117,7 @@ public class Challenge2 {
             }
 
             if(nextBtnFlag==1) {
-                WebElement nextBtn = driver.findElement(By.xpath("//h3[text()='" + strCarouselHeaderLabel + "']/../../..//div[contains(@class,'swiper-button-next')]"));
+                WebElement nextBtn = driver.findElement(By.xpath(strNextBtn));
 
                 nextButtonStatus = nextBtn.isDisplayed();
 
